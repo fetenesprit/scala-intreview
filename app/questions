@@ -1,0 +1,71 @@
+﻿
+1) Explain REST and RESTful
+Rest :
+REST est l’acronyme de REpresentational State Transfert.
+REST est un style d’architecture inspiré de l’architecture du Web pour construire des services web.
+REST ne soit pas un standard, il utilise des standards:
+- HTTP
+- URL
+- XML/HTML
+ REST est une alternative à SOAP(SOAP-Simple Object Acces Protocol: Protocole pour la communication entre Web Services).
+ ▪ REST est léger et simple, auto-descriptif (vous pouvez naviguer à travers ses ressources comme vous le feriez avec une page
+ Web. Il y a une URL intuitive unique pour chaque ressource. On peut facilement en
+déduire la structure des ressources sans avoir besoin de beaucoup de documentation.) , est stateless et il peut être géré en cache.
+
+RESTful :
+RESTful Web Service est les  Web Service sont écrits basés sur la structure  REST.
+Rest ne stocke pas les informations du client. Par exemple, vous venez d'envoyer une demande pour
+voir la page2 d'un document et vous souhaitez maintenant voir la page suivante (Page 3).
+REST ne stockera pas l'information qui vous a servi la page 2 précédemment. Cela signifie que  REST ne gère pas Session.
+Dans un service Web  RESTful, le serveur est chargé de donner des commentaires et fournit un moyen
+de permettre au client de maintenir l'état de l'application elle-même.
+
+
+2) Explain the architectural style for the creation of a web API (client server communication, formatting language, etc.)
+Le composant principal d'un service Web est constitué par les données transférées entre le client et le serveur,
+c'est-à-dire XML. XML (Extensible Markup Language) est un équivalent du HTML et est facile à comprendre le langage intermédiaire compris par
+de nombreux langages de programmation.
+Ainsi, lorsque les applications se parlent, elles parlent en fait en XML.
+Ceci fournit une plate-forme commune pour que les applications développées dans divers langages de programmation puissent
+communiquer entre elles.
+Les services Web utilisent quelque chose appelé SOAP (Simple Object Access Protocol)
+pour envoyer les données XML entre les applications. Les données sont envoyées via HTTP normal.
+Les données envoyées par le service Web à l'application s'appellent un message SOAP.
+Le message SOAP n’est autre qu’un document XML. Le document étant écrit en XML,
+l'application cliente appelant le service Web peut être écrite dans n'importe quel langage de programmation.
+
+3) Explain HTTP requests types when used with RESTful web (GET, PUT, POST, etc.)
+Méthodes HTTP : GET, POST, PUT and DELETE
+Une ressource quelconque peut subir quatre opérations de base désignées par CRUD :
+Create (Créer) : POST(REST) // Méthode POST crée une ressource
+Retrieve (Lire):GET(REST) // Méthode GET fournit la représentation de la ressource
+Update (mettre à jour):PUT(REST) // Méthode PUT met à jour une ressource
+Delete (Supprimer):DELETE(REST) // Méthode DELETE supprime une ressource
+/***/
+le client (GET): format de sortie
+le serveur (PUT et POST): format d’entrée
+
+Le format d’entrée (PUT et POST) et le format de sortie (GET) d’un service Web d’une ressource peuvent
+être différents
+
+
+
+4) Explain the difference between stateless and stateful protocol. Which type of protocol is HTTP ?
+Lors de la réalisation d’un service pour une architecture SOA, il arrive de devoir introduire,
+dans certaines situations, les notions de contexte ou de session.
+Les services web RESTfull sont stateless toujours.
+Statefull : les requetes envoyées  de type statefull sont attachées l'une à l'autre, par example si l'operation 2+1 = 3
+dans la requétes suivante le résultat 3 il va étre prise en considération , si on envoie maintenant 5+1 resultat = 9 (6+3).
+Stateless : c'est le contraire chaque requéte est indépendante (example si on envoie 2+1 résultat égale à 3  et si on envoie maintenant 5+1 resultat égale à
+6.
+protocole HTTP : est un protocole de communication = de transport
+il est utilisé pour transferer les fichiers du client au fournisseu .
+
+5) Explain the difference between a GET and a POST (like how are sent the parameters)
+La méthode GET :fournit la représentation de la ressource ( les classes et les méthodes ) .Cette méthode peut étre paramétrée ou bien non paramétré
+La méthode POST : c'est pour créer une ressource ( les classes et les méthodes ).Cette méthode est toujours paramétrée .
+6) You can’t work out how to solve a coding problem. What do you do to find the answer?
+ on peut fixer une erreur par changer le type de retour de la méthode en RESPONSE et dans la return on spécifie le type d'erreur qu'on veut afficher .
+ (expl : NOT_FOUND ,NULL.....)
+
+"j'espére que j'ai bien répondu à toutes les questions "
